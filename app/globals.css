@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background:40 10% 97%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 40 10% 97%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 40 10% 97%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 237.4 96.1% 66.7%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 237.4 96.1% 66.7%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Vertical Center Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: hsl(var(--border));
+  z-index: 1;
+  border-radius: 2px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Icon - absolutely positioned on center line */
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  top: 20px; /* adjust vertical alignment */
+  transform: translateX(-50%);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 0 0 4px hsl(var(--card)); /* adds a white border around icon */
+}
+
+/* Left Content */
+.timeline-item.left .timeline-content {
+  margin-right: auto;   /* push content to the left */
+  margin-left: 0;
+  padding-right: 40px; /* spacing from center line */
+  max-width: 45%;
+  text-align: right; /* align text right so it’s close to center line */
+}
+
+/* Right Content */
+.timeline-item.right .timeline-content {
+  margin-left: auto;    /* push content to the right */
+  margin-right: 0;
+  padding-left: 40px;  /* spacing from center line */
+  max-width: 45%;
+  text-align: left;    /* align text left */
+}
+
+/* Timeline Content box */
+.timeline-content {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+    transform: none;
+    width: 3px;
+  }
+
+  .timeline-icon {
+    left: 8px;
+    transform: none;
+    top: 15px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    max-width: 100%;
+    margin: 0 0 0 50px;
+    padding: 15px 20px;
+    text-align: left;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
