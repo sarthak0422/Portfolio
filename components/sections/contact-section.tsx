@@ -112,7 +112,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="flex flex-col items-center justify-center max-w-5xl mx-auto">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -198,7 +198,7 @@ export function ContactSection() {
             </motion.div>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -310,7 +310,7 @@ export function ContactSection() {
                 </Button>
               </form>
             </Form>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </MotionSection>
