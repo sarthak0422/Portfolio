@@ -82,15 +82,15 @@ export const PROJECTS: Project[] = [
     demoUrl: "https://climate-sarthak.vercel.app/",
     githubUrl: "https://github.com/sarthak0422/ClimatEApp",
   },
-  // {
-  //   id: 5,
-  //   title: "College Placement System",
-  //   description: "Comprehensive fitness tracking app with personalized workout plans, nutrition tracking, and progress analytics.",
-  //   image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg",
-  //   tags: ["React Native", "GraphQL", "Node.js", "Firebase", "TensorFlow"],
-  //   demoUrl: "https://example.com",
-  //   githubUrl: "https://github.com",
-  // },
+  {
+  id: 5,
+  title: "College Placement Management System",
+  description: "The College Placement Management System is a web-based platform developed by final-year students of A.C. Patil College of Engineering to digitize and streamline the placement process.",
+  image: "assets/college.png",
+  tags: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Tailwind CSS", "Bootstrap"],
+  demoUrl: "https://example.com",
+  githubUrl: "https://github.com/sarthak0422/PlacementSystem"
+}
   // {
   //   id: 6,
   //   title: "6",
@@ -101,15 +101,7 @@ export const PROJECTS: Project[] = [
   //   githubUrl: "https://github.com",
   // },
 
-  {
-  id: 5,
-  title: "College Placement Management System",
-  description: "The College Placement Management System is a web-based platform developed by final-year students of A.C. Patil College of Engineering to digitize and streamline the placement process.",
-  image: "assets/college.png",
-  tags: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Tailwind CSS", "Bootstrap"],
-  demoUrl: "https://example.com",
-  githubUrl: "https://github.com/sarthak0422/PlacementSystem"
-}
+  
 
 
 
