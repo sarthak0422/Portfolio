@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     title: "Weather App",
     description:
       "It is a modern weather forecasting application built with React JS, TypeScript, and Tailwind CSS, featuring real-time data from the OpenWeather API, advanced data fetching using Tanstack Query, and interactive charts with Recharts, all styled using Shadcn UI.",
-    image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg",
+    image: "/assets/climateapp.png",
     tags: ["React JS","TypeScript","Tailwind CSS","Tanstack Query","Recharts","OpenWeather API","Shadcn UI",],
     demoUrl: "https://climate-sarthak.vercel.app/",
     githubUrl: "https://github.com/sarthak0422/ClimatEApp",
