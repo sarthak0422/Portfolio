@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
   },
   // {
   //   id: 5,
-  //   title: "5",
+  //   title: "College Placement System",
   //   description: "Comprehensive fitness tracking app with personalized workout plans, nutrition tracking, and progress analytics.",
   //   image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg",
   //   tags: ["React Native", "GraphQL", "Node.js", "Firebase", "TensorFlow"],
@@ -100,6 +100,19 @@ export const PROJECTS: Project[] = [
   //   demoUrl: "https://example.com",
   //   githubUrl: "https://github.com",
   // },
+
+  {
+  id: 5,
+  title: "College Placement Management System",
+  description: "The College Placement Management System is a web-based platform developed by final-year students of A.C. Patil College of Engineering to digitize and streamline the placement process. It supports multiple user roles—Students, TPO Admin, Management Admin, and Super Admin—offering real-time tracking and improved transparency.\n\nUser Roles:\n- Students: View and apply for jobs, update profile, track status, and upload resumes.\n- TPO Admin: Post jobs, manage applications, upload offer letters, and schedule interviews.\n- Management Admin: Access dashboards and reports for data-driven decision making.\n- Super Admin: Manage system settings, and create/manage TPO and Management users.\n\nTech Stack:\n- Frontend: Vite + React.js, Tailwind CSS, Bootstrap\n- Backend: Node.js, Express.js\n- Database: MongoDB\n- Authentication: JSON Web Tokens (JWT)\n- File Storage: Cloudinary\n- Styling: Tailwind CSS, Bootstrap\n\nFeatures:\n- Student Portal: Register and login, update profile, upload resume, view available job opportunities, apply for jobs, and track application status.\n- TPO Admin Portal: Post and manage job listings, approve/reject student applications, schedule interviews, upload offer letters.\n- Management Admin Portal: Access analytics, monitor placement stats, and view comprehensive reports.\n- Super Admin Portal: Full control of the system including onboarding TPOs and management users, managing system configurations.\n- Cloudinary Integration: Handles secure storage of profile pictures, resumes, and offer letters.",
+  image: "https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg",
+  tags: ["React.js", "Vite", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Tailwind CSS", "Bootstrap"],
+  demoUrl: "https://example.com",
+  githubUrl: "https://github.com"
+}
+
+
+
 ];
 
 export const SKILLS: Skill[] = [
